@@ -32,5 +32,5 @@ protected:
 public:
 
 	void ItemCollected();
-	
+	bool IsWin() const;
 };

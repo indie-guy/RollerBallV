@@ -17,6 +17,6 @@ class ROLLERBOLL_API URollerBall_Widget : public UUserWidget
 public:
 
 	UFUNCTION(BlueprintImplementableEvent)
-	void SetItemText(int32 ItemsCollected, int32 ItemsInLevel);
+	void SetItemText(int32 ItemsCollected, int32 ItemsInLevel, bool IsWin);
 
 };

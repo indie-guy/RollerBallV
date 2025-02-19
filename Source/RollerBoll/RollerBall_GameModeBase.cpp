@@ -22,15 +22,21 @@ void ARollerBall_GameModeBase::BeginPlay()
 			UpdateItemText();
 		}
 	}
+
 }
 
 void ARollerBall_GameModeBase::UpdateItemText()
 {
-	GameWidget->SetItemText(ItemsCollected, ItemsInLevel);
+	GameWidget->SetItemText(ItemsCollected, ItemsInLevel, IsWin());	
 }
 
 void ARollerBall_GameModeBase::ItemCollected()
 {
 	ItemsCollected ++;
 	UpdateItemText();
+}
+
+bool ARollerBall_GameModeBase::IsWin() const
+{
+	return (ItemsCollected == ItemsInLevel);
 }
