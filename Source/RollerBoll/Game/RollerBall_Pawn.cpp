@@ -77,7 +77,7 @@ void ARollerBall_Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 void ARollerBall_Pawn::MoveForward()
 {
 	UE_LOG(LogTemp, Warning, TEXT("MoveForward"));
-	FVector Forward = Camera->GetForwardVector()* MoveForce;
+	FVector Forward = Camera->GetForwardVector()* MoveForce * 2.0f;
 	Forward.Z = 0.0f;
 	Mesh->AddForce(Forward);
 }
@@ -85,7 +85,7 @@ void ARollerBall_Pawn::MoveForward()
 void ARollerBall_Pawn::MoveBackward()
 {
 	UE_LOG(LogTemp, Warning, TEXT("MoveBackward"));
-	FVector Forward = Camera->GetForwardVector() * MoveForce * -1.0f;
+	FVector Forward = Camera->GetForwardVector() * MoveForce * -2.0f;
 	Forward.Z = 0.0f;
 	Mesh->AddForce(Forward);
 }
@@ -93,7 +93,7 @@ void ARollerBall_Pawn::MoveBackward()
 void ARollerBall_Pawn::MoveRight()
 {
 	UE_LOG(LogTemp, Warning, TEXT("MoveRight"));
-	FVector Right = Camera->GetRightVector() * MoveForce;
+	FVector Right = Camera->GetRightVector() * MoveForce * 2.0f;
 	Right.Z = 0.0f;
 	Mesh->AddForce(Right);
 }
@@ -101,7 +101,7 @@ void ARollerBall_Pawn::MoveRight()
 void ARollerBall_Pawn::MoveLeft()
 {
 	UE_LOG(LogTemp, Warning, TEXT("MoveLeft"));
-	FVector Right = Camera->GetRightVector() * MoveForce * -1.0f;
+	FVector Right = Camera->GetRightVector() * MoveForce * -2.0f;
 	Right.Z = 0.0f;
 	Mesh->AddForce(Right);
 }

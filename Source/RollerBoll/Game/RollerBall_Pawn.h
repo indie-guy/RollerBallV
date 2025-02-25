@@ -33,7 +33,7 @@ protected:
 
 	// VARIABLES //
 	UPROPERTY (EditAnywhere, BlueprintReadWrite)
-	float MoveForce = 500.0f;
+	float MoveForce = 2000.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float JumpImpulse = 500.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
